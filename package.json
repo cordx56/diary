@@ -1,0 +1,14 @@
+{
+  "name": "diary",
+  "version": "1.0.0",
+  "description": "cordx56's diary",
+  "main": "index.js",
+  "author": "Kaoru Chisen <cordx56@cordx.net>",
+  "license": "MIT",
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-connect": "^5.7.0"
+  }
+}

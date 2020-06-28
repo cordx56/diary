@@ -1,0 +1,48 @@
+name: Hakyll Deploy
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Cache Stack
+      uses: actions/cache@v1
+      with:
+        path: ~/.stack
+        key: haskell-${{ hashFiles('stack.yaml') }}
+
+    - name: Install system dependencies
+      run: |
+        sudo apt install -y asciidoctor
+
+    - uses: actions/setup-haskell@v1
+      with:
+        ghc-version: '8.6.5'
+        cabal-version: '3.0'
+    - name: Install Haskell dependencies
+      if: steps.cache-stack.outputs.cache-hit != 'true'
+      run: |
+        stack setup
+        stack install
+    - name: Build Hakyll
+      run: |
+        stack build
+
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - name: Install node dependencies
+      run: yarn install
+    - name: Build
+      run: yarn gulp build
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.ACCESS_TOKEN }}
+        publish_dir: ./dist

@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+body {
+  margin: 0;
+}
+
+header {
+  padding: 1rem;
+  color: #ccc;
+  background-color: #444;
+}
+header .logo {
+  display: inline-block;
+  margin: 0 3rem 0 0;
+}
+header a {
+  color: #ccc;
+  text-decoration: none;
+}
+header nav {
+  display: inline-block;
+}
+
+.content {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+
+main {
+  padding: 0 1rem;
+}
+
+main hr {
+  background-color: #ccc;
+  height: 1px;
+  border: none;
+}
+
+footer {
+  border-top: 1px solid #ccc;
+  padding-top: 0.5rem;
+  text-align: center;
+}
+
+a {
+  color: #cc0000;
+}
+
+pre.sourceCode {
+  background: #2b2d3a;
+  color: #c5cdd9;
+  padding: 1rem;
+  overflow: scroll;
+}
+
+.sourceCode span.al { color: #ff0000; font-weight: bold; }
+.sourceCode span.an { color: #7e8294; font-weight: bold; font-style: italic; }
+.sourceCode span.at { }
+.sourceCode span.bn { }
+.sourceCode span.bu { }
+.sourceCode span.cf { color: #d38aea; font-weight: bold; }
+.sourceCode span.ch { color: #a0c980; }
+.sourceCode span.cn { }
+.sourceCode span.co { color: #7e8294; font-style: italic; }
+.sourceCode span.cv { color: #7e8294; font-weight: bold; font-style: italic; }
+.sourceCode span.do { font-style: italic; }
+.sourceCode span.dt { }
+.sourceCode span.dv { color: #a0c980; }
+.sourceCode span.er { color: #ff0000; font-weight: bold; }
+.sourceCode span.ex { }
+.sourceCode span.fl { color: #a0c980; }
+.sourceCode span.fu { color: #6ab2e7; }
+.sourceCode span.im { }
+.sourceCode span.in { color: #7e8294; font-weight: bold; font-style: italic; }
+.sourceCode span.kw { color: #d38aea; font-weight: bold; }
+.sourceCode span.op { color: #6ab2e7; }
+.sourceCode span.ot { color: #d38aea; }
+.sourceCode span.pp { }
+.sourceCode span.sc { color: #a0c980; }
+.sourceCode span.ss { color: #a0c980; }
+.sourceCode span.st { color: #a0c980; }
+.sourceCode span.va { }
+.sourceCode span.vs { color: #a0c980; }
+.sourceCode span.wa { color: #7e8294; font-weight: bold; font-style: italic; }
