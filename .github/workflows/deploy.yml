@@ -1,6 +1,9 @@
 name: Hakyll Deploy
 
-on: [push]
+on:
+  push:
+    branches:
+      - diary
 
 jobs:
   build:
@@ -46,3 +49,5 @@ jobs:
       with:
         github_token: ${{ secrets.ACCESS_TOKEN }}
         publish_dir: ./dist
+        user_name: 'Kaoru[bot]'
+        user_email: 'dummy@cordx.net'
