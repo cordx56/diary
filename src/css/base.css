@@ -56,7 +56,7 @@ pre.sourceCode {
   background: #2b2d3a;
   color: #c5cdd9;
   padding: 1rem;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .sourceCode span.al { color: #ff0000; font-weight: bold; }
