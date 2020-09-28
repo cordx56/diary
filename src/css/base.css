@@ -52,6 +52,11 @@ a {
   color: #cc0000;
 }
 
+blockquote {
+  border-left: 5px solid #ccc;
+  padding-left: 1rem;
+}
+
 pre.sourceCode {
   background: #2b2d3a;
   color: #c5cdd9;
