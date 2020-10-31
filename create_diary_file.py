@@ -21,7 +21,7 @@ def delete_frontmatter(text):
                 return '\n'.join(txtarr[i + 1:])
 
 def dump_frontmatter(obj):
-    return '---\n' + yaml.dump(obj) + '---\n'
+    return '---\n' + yaml.dump(obj, allow_unicode=True) + '---\n'
 
 tmpfile = tempfile.mkstemp('.md')
 os.write(tmpfile[0], b'''---
